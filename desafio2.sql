@@ -1,1 +1,1 @@
-SHOW COLUMNS FROM northwind.products;
+SELECT * FROM northwind.products;
