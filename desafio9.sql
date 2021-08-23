@@ -1,1 +1,1 @@
- select notes from northwind.purchase_orders where notes <> 'null';
+select notes from northwind.purchase_orders where not(notes='null');
