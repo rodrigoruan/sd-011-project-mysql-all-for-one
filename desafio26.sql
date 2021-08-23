@@ -1,0 +1,1 @@
+UPDATE northwind.order_details SET unit_price = 0 WHERE (unit_price > 10.0000);
