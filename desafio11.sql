@@ -1,3 +1,1 @@
-SELECT notes FROM northwind.purchase_orders
-WHERE notes IS NOT NULL
-LIMIT 5;
+SELECT notes FROM northwind.purchase_orders WHERE notes IS NOT NULL LIMIT 5;
