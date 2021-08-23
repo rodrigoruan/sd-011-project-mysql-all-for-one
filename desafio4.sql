@@ -1,1 +1,2 @@
-SELECT supplier_ids FROM northwind.products;
+SELECT COUNT(product_name)
+FROM northwind.products;
