@@ -108,9 +108,9 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 ## Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone https://github.com/tryber/sd-011-project-mysql-all-for-one.git`.
+  * `git clone https://github.com/tryber/sd-011-mysql-all-for-one.git`.
   * Entre na pasta do repositório que você acabou de clonar:
-    * `cd sd-011-project-mysql-all-for-one`
+    * `cd sd-011-mysql-all-for-one`
 
 2. Instale as dependências [**Caso existam**]
   * `npm install` [**exemplo**]
@@ -143,13 +143,13 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
   * Usando o exemplo anterior: `git push -u origin seunome-mysql-all-for-one`
 
 7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-011-project-mysql-all-for-one/pulls)
+  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-011-mysql-all-for-one/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-011-project-mysql-all-for-one/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-011-mysql-all-for-one/pulls) e confira que o seu _Pull Request_ está criado
 
 ---
 
@@ -199,7 +199,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 ## Instruções para testar suas queries
 
-Para executar localmente os testes, é preciso escrever o seguinte no seu terminal:
+Para executar localmente os testes, é preciso escrever o seguinte comando no seu terminal:
 ```sh
 MYSQL_USER=<SEU_NOME_DE_PESSOA_USUARIA> MYSQL_PASSWORD=<SUA SENHA> HOSTNAME=<NOME_DO_HOST> npm test
 ```
@@ -227,14 +227,14 @@ Monte queries para encontrar as informações esperadas pelos desafios:
 
 ## Desafios Iniciais
 
-#### 1 - Exiba apenas os nomes do produtos na tabela `products`.
+#### 1 - Exiba apenas os nomes dos produtos da tabela `products`.
 
 #### 2 - Exiba os dados de todas as colunas da tabela `products`.
 
-#### 3 - Escreva uma query que exiba os valores da coluna que representa a primary key da tabela `products`.
+#### 3 - Escreva uma query que exiba os valores da coluna que contém a primary key da tabela `products`.
 
-#### 4 - Conte quantos registros existem em `product_name` de `products`.
-#### 5 - Monte uma query que exiba os dados da tabela `products` a partir do quarto registro até o décimo terceiro, incluindo tanto um quanto o outro. Obs.: não use `where` ou `order by`.
+#### 4 - Conte quantos registros existem na coluna `product_name` da tabela `products`.
+#### 5 - Monte uma query que exiba os dados da tabela `products` a partir do quarto registro até o décimo terceiro. Tanto o quarto quanto o décimo terceiro registros, precisam aparecer na consulta. Obs.: não use `where` ou `order by`.
 
 #### 6 - Exiba os dados das colunas `product_name` e `id` da tabela `products` de maneira que os resultados estejam em ordem alfabética dos nomes.
 
@@ -245,45 +245,45 @@ Monte queries para encontrar as informações esperadas pelos desafios:
 
 ## Desafios sobre filtragem de dados
 
-#### 9 - Mostre todos os valores de `notes` da tabela `purchase_orders` que não são nulos.
+#### 9 - Mostre todos os valores da coluna `notes` da tabela `purchase_orders` que não são nulos.
 
-#### 10 - Mostre todos os dados da tabela `purchase_orders` em ordem decrescente ordenados por `created_by` em que o `created_by` é maior ou igual a 3. E como critério de desempate para a ordenação, ordene também os resultados pelo `id` de forma crescente.
+#### 10 - Mostre todos os dados da tabela `purchase_orders` em ordem decrescente, ordenados por `created_by` em que o `created_by` é maior ou igual a 3. Como critério de desempate para a ordenação, ordene também os resultados pelo `id` de forma crescente.
 
-#### 11 - Exiba os dados de `notes` da tabela `purchase_orders` em que seu valor de \"Purchase generated based on Order\" está entre 30 e 39, incluindo tanto o valor de 30 quanto de 39.
+#### 11 - Exiba os dados da coluna `notes` da tabela `purchase_orders` em que seu valor de \"Purchase generated based on Order\" está entre 30 e 39, incluindo tanto o valor de 30 quanto de 39.
 
-#### 12 - Mostre as `submitted_date` de `purchase_orders` em que a `submitted_date` é do dia 26 de abril de 2006.
+#### 12 - Mostre os resultados da coluna `submitted_date` da tabela  `purchase_orders` em que a `submitted_date` é do dia 26 de abril de 2006.
 
-#### 13 - Mostre o `supplier_id` das `purchase_orders` em que o `supplier_id` seja 1 ou 3.
+#### 13 - Mostre o resultado da coluna `supplier_id` da tabela `purchase_orders` em que o `supplier_id` seja 1 ou 3.
 
-#### 14 - Mostre os `supplier_id` da `purchase_orders` em que o `supplier_id` seja de 1 a 3, incluindo tanto o 1 quanto o 3.
+#### 14 - Mostre os resultados da coluna `supplier_id` da tabela `purchase_orders` em que o `supplier_id` esteja entre os valores 1 e 3, incluindo tanto o 1 quanto o 3.
 
-#### 15 - Mostre somente as horas (sem os minutos e os segundos) da `submitted_date` de todos registros de `purchase_orders`. Chame essa coluna de `submitted_hour`.
+#### 15 - Mostre somente as horas (sem os minutos e os segundos) da coluna `submitted_date` de todos registros da tabela `purchase_orders`. Chame essa coluna de `submitted_hour`.
 
-#### 16 - Exiba a `submitted_date` das `purchase_orders` que estão entre `2006-01-26 00:00:00` e `2006-03-31 23:59:59`.
+#### 16 - Exiba os resultados da coluna `submitted_date` da tabela `purchase_orders` que estão entre `2006-01-26 00:00:00` e `2006-03-31 23:59:59`.
 
-#### 17 - Mostre os registros das colunas `id` e `supplier_id` das `purchase_orders` em que os `supplier_id` sejam tanto 1, ou 3, ou 5, ou 7.
+#### 17 - Mostre os registros das colunas `id` e `supplier_id` da tabela `purchase_orders` em que os `supplier_id` sejam tanto 1, ou 3, ou 5, ou 7.
 
-#### 18 - Mostre todos os registros de `purchase_orders` que tem o `supplier_id` igual a 3 e `status_id` igual a 2.
+#### 18 - Mostre todos os registros da tabela `purchase_orders` que tem o valor na coluna `supplier_id` igual a 3 e o valor na coluna `status_id` igual a 2.
 
-#### 19 - Mostre a quantidade de pedidos que foram feitos na tabela `orders` pelo `employee_id` igual a 5 ou 6, e que foram enviados através do método `shipper_id` igual a 2. Chame a coluna de orders_count.
+#### 19 - Mostre a quantidade de pedidos que foram feitos na tabela `orders` pelo `employee_id` igual a 5 ou 6, e que foram enviados através do método(coluna) `shipper_id` igual a 2. Chame a coluna de `orders_count`.
 
 ---
 
 ## Desafios de manipulação de tabelas
 
-#### 20 - Adicione ao `order_details` uma linha com os seguintes dados: `order_id`: 69, `product_id`: 80, `quantity`: 15.0000, `unit_price`: 15.0000, `discount`: 0, `status_id`: 2, `date_allocated`: NULL, `purchase_order_id`: NULL e `inventory_id`: 129. Obs.: o `id` deve ser incrementado automaticamente.
+#### 20 - Adicione à tabela `order_details` uma linha com os seguintes dados: `order_id`: 69, `product_id`: 80, `quantity`: 15.0000, `unit_price`: 15.0000, `discount`: 0, `status_id`: 2, `date_allocated`: NULL, `purchase_order_id`: NULL e `inventory_id`: 129. Obs.: o `id` deve ser incrementado automaticamente.
 
-#### 21 - Adicione, com um único `INSERT`, duas linhas ao `order_details` com os mesmos dados. Esses dados são novamente `order_id`: 69, `product_id`: 80, `quantity`: 15.0000, `unit_price`: 15.0000, `discount`: 0, `status_id`: 2, `date_allocated`: NULL, `purchase_order_id`: NULL e `inventory_id`: 129 (o `ìd` deve ser incrementado automaticamente).
+#### 21 - Adicione, com um único `INSERT`, duas linhas à tabela `order_details` com os mesmos dados. Esses dados são novamente `order_id`: 69, `product_id`: 80, `quantity`: 15.0000, `unit_price`: 15.0000, `discount`: 0, `status_id`: 2, `date_allocated`: NULL, `purchase_order_id`: NULL e `inventory_id`: 129. O `ìd` deve ser incrementado automaticamente.
 
-#### 22 - Atualize os dados de `discount` do `order_details` para 15. (Não é necessário utilizar o SAFE UPDATE em sua query).
+#### 22 - Atualize os dados na coluna `discount` da tabela `order_details` para 15. (Não é necessário utilizar o SAFE UPDATE em sua query).
 
-#### 23 - Atualize os dados de `discount` da tabela `order_details` para 30 cuja `unit_price` seja menor que 10.0000. (Não é necessário utilizar o SAFE UPDATE em sua query).
+#### 23 - Atualize os dados da coluna `discount` da tabela `order_details` para 30, onde o valor na coluna `unit_price` seja menor que 10.0000. (Não é necessário utilizar o SAFE UPDATE em sua query).
 
-#### 24 - Atualize os dados de `discount` da tabela `order_details` para 45 cuja `unit_price` seja maior que 10.0000 e o id seja um número entre 30 a 40. (Não é necessário utilizar o SAFE UPDATE em sua query).
+#### 24 - Atualize os dados da coluna `discount` da tabela `order_details` para 45, onde o valor na coluna `unit_price` seja maior que 10.0000 e o id seja um número entre 30 a 40. (Não é necessário utilizar o SAFE UPDATE em sua query).
 
-#### 25 - Delete todos os dados em que a `unit_price` da tabela `order_details` seja menor que 10.0000.
+#### 25 - Delete todos os dados na coluna `unit_price` da tabela `order_details` em que o valor seja menor que 10.0000.
 
-#### 26 - Delete todos os dados em que a `unit_price` da tabela `order_details` seja maior que 10.0000.
+#### 26 - Delete todos os dados na coluna `unit_price` da tabela `order_details` em que o valor seja maior que 10.0000.
 
 #### 27 - Delete todos os dados da tabela `order_details`.
 
