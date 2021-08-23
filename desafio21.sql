@@ -2,4 +2,3 @@ INSERT INTO northwind.order_details (order_id, product_id, quantity, unit_price,
 VALUES 
 (69, 80, 15, 15, 0, 2, NULL, NULL, 129),
 (69, 80, 15, 15, 0, 2, NULL, NULL, 129);
-    
