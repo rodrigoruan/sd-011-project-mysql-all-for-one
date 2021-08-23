@@ -1,0 +1,2 @@
+-- SELECT * FROM northwind.purchase_orders
+-- WHERE notes BETWEEN LIKE '%30%' AND LIKE '%39%';
