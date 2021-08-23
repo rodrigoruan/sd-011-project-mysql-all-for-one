@@ -1,4 +1,4 @@
-INSERT INTO order_details
+INSERT INTO northwind.order_details
 (order_id, product_id, quantity,
 unit_price, discount, status_id,
 date_allocated, purchase_order_id, inventory_id) 
