@@ -6,15 +6,13 @@ describe('Desafios iniciais', () => {
   let sequelize;
 
   beforeAll(async () => {
-    const importer = new Importer(
-      { user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD, host: process.env.HOSTNAME }
-    );
+    const importer = new Importer({ user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD, host: process.env.HOSTNAME });
 
     await importer.import('./northwind.sql');
 
     importer.disconnect();
 
-    sequelize = new Sequelize('northwind', process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, {host:process.env.HOSTNAME, dialect: 'mysql'})
+    sequelize = new Sequelize('northwind', process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, { host: process.env.HOSTNAME, dialect: 'mysql' })
   });
 
   afterAll(async () => {
